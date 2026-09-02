@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estudio Altiplano — Sitios web para negocios locales en San Luis Potosí</title>
+<meta name="description" id="metaDesc" content="Diseñamos sitios web rápidos, seguros y fáciles de encontrar en Google para negocios locales de San Luis Potosí. Cotiza tu proyecto por WhatsApp.">
+<link rel="canonical" href="https://estudioaltiplano.mx/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:title" content="Estudio Altiplano — Sitios web para negocios locales en SLP">
+<meta property="og:description" content="Sitios web rápidos, seguros y fáciles de encontrar en Google para negocios locales de San Luis Potosí.">
+<meta property="og:url" content="https://estudioaltiplano.mx/">
+<meta property="og:image" content="https://estudioaltiplano.mx/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f1115">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f1115'/><path d='M26 68 L50 28 L74 68' stroke='%23ff6b35' stroke-width='11' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f1115;
+    --surface:#151920;
+    --card:#1b2029;
+    --card-2:#212734;
+    --line:rgba(255,255,255,0.09);
+    --line-2:rgba(255,255,255,0.16);
+    --text:#eef0f4;
+    --muted:#9aa3b2;
+    --accent:#ff6b35;
+    --accent-soft:rgba(255,107,53,0.12);
+    --gold:#ffd166;
+    --green:#3ddc97;
+    --radius:14px;
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%;}
+  body{
+    font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background:var(--ink);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{line-height:1.15; font-weight:800; letter-spacing:-0.02em;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  img,svg{display:block; max-width:100%;}
+  :focus-visible{outline:3px solid var(--accent); outline-offset:3px; border-radius:4px;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    display:inline-block;
+    font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--accent); margin-bottom:16px;
+  }
+  .section-head{max-width:660px; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(1.75rem,4vw,2.6rem); margin-bottom:14px;}
+  .section-head p{color:var(--muted); font-size:1.05rem;}
+  section{padding:96px 0; position:relative;}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    padding:13px 26px; border-radius:100px;
+    font-weight:700; font-size:0.95rem;
+    border:1px solid transparent; cursor:pointer;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--accent); color:#1a0d06;}
+  .btn-primary:hover{background:#ff7f4f;}
+  .btn-ghost{border-color:var(--line-2); color:var(--text);}
+  .btn-ghost:hover{border-color:var(--accent); color:var(--accent);}
+  .btn svg{width:17px; height:17px;}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:60;
+    background:rgba(15,17,21,0.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; gap:28px; height:68px;}
+  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.05rem; letter-spacing:-0.02em;}
+  .logo-mark{width:30px; height:30px; flex:none;}
+  .nav-links{display:flex; gap:26px; margin-left:auto; font-size:0.93rem; font-weight:500;}
+  .nav-links a{color:var(--muted); transition:color .15s;}
+  .nav-links a:hover{color:var(--text);}
+  .nav-actions{display:flex; align-items:center; gap:12px;}
+  .lang{
+    display:flex; align-items:center; border:1px solid var(--line-2);
+    border-radius:100px; overflow:hidden; font-size:0.78rem; font-weight:700;
+  }
+  .lang button{
+    background:none; border:none; color:var(--muted); cursor:pointer;
+    padding:6px 11px; font:inherit; transition:.15s;
+  }
+  .lang button[aria-pressed="true"]{background:var(--accent); color:#1a0d06;}
+  .burger{
+    display:none; background:none; border:1px solid var(--line-2);
+    border-radius:9px; padding:8px; cursor:pointer;
+  }
+  .burger svg{width:20px; height:20px; stroke:var(--text);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:110px 0 88px; text-align:center; position:relative; overflow:hidden;}
+  .hero::before{
+    content:""; position:absolute; top:-260px; left:50%; transform:translateX(-50%);
+    width:900px; height:620px; pointer-events:none;
+    background:radial-gradient(ellipse at center, rgba(255,107,53,0.20), transparent 68%);
+  }
+  .hero > .wrap{position:relative;}
+  .badge{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:7px 16px; border:1px solid var(--line-2); border-radius:100px;
+    font-size:0.82rem; color:var(--muted); margin-bottom:28px;
+  }
+  .badge .dot{width:7px; height:7px; border-radius:50%; background:var(--green); flex:none;}
+  .hero h1{font-size:clamp(2.3rem,6.2vw,4.35rem); margin-bottom:24px;}
+  .hero h1 .hl{
+    color:var(--accent);
+    background:linear-gradient(180deg, transparent 62%, var(--accent-soft) 62%);
+  }
+  .hero .lede{
+    font-size:clamp(1.02rem,2.1vw,1.2rem); color:var(--muted);
+    max-width:620px; margin:0 auto 36px;
+  }
+  .hero-cta{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+  .trust{
+    display:flex; gap:30px; justify-content:center; flex-wrap:wrap;
+    margin-top:56px; padding-top:34px; border-top:1px solid var(--line);
+  }
+  .trust div{text-align:center;}
+  .trust strong{display:block; font-size:1.5rem; color:var(--text); font-weight:800;}
+  .trust span{font-size:0.83rem; color:var(--muted);}
+
+  /* ---------- capabilities ---------- */
+  .cap-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(258px,1fr)); gap:18px;}
+  .cap{
+    background:var(--card); border:1px solid var(--line);
+    border-radius:var(--radius); padding:26px 24px;
+    transition:border-color .18s, transform .18s;
+  }
+  .cap:hover{border-color:var(--accent); transform:translateY(-3px);}
+  .cap .ico{
+    width:40px; height:40px; border-radius:11px; margin-bottom:16px;
+    background:var(--accent-soft); display:flex; align-items:center; justify-content:center;
+  }
+  .cap .ico svg{width:20px; height:20px; stroke:var(--accent); fill:none; stroke-width:2;}
+  .cap h3{font-size:1.02rem; margin-bottom:8px;}
+  .cap p{font-size:0.9rem; color:var(--muted); line-height:1.55;}
+
+  /* ---------- packages ---------- */
+  .packages{background:var(--surface); border-block:1px solid var(--line);}
+  .pkg-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:22px; align-items:start;}
+  .pkg{
+    background:var(--card); border:1px solid var(--line);
+    border-radius:18px; padding:32px 28px; position:relative; height:100%;
+    display:flex; flex-direction:column;
+  }
+  .pkg.featured{border-color:var(--accent); background:var(--card-2);}
+  .pkg-tag{
+    position:absolute; top:-12px; left:28px;
+    background:var(--accent); color:#1a0d06;
+    font-size:0.7rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase;
+    padding:5px 13px; border-radius:100px;
+  }
+  .pkg h3{font-size:1.35rem; margin-bottom:8px;}
+  .pkg .for{font-size:0.88rem; color:var(--muted); margin-bottom:22px; min-height:42px;}
+  .pkg .price-note{
+    font-size:0.85rem; color:var(--gold); font-weight:600;
+    padding:12px 0; border-block:1px solid var(--line); margin-bottom:22px;
+  }
+  .pkg ul{display:flex; flex-direction:column; gap:11px; margin-bottom:28px; flex:1;}
+  .pkg li{display:flex; gap:10px; font-size:0.9rem; color:var(--muted); align-items:flex-start;}
+  .pkg li svg{width:16px; height:16px; flex:none; margin-top:4px; stroke:var(--green); fill:none; stroke-width:2.6;}
+  .pkg .btn{width:100%; justify-content:center;}
+
+  /* ---------- process ---------- */
+  .steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(228px,1fr)); gap:26px;}
+  .step{position:relative; padding-top:22px; border-top:2px solid var(--line);}
+  .step .n{
+    font-size:0.76rem; font-weight:800; color:var(--accent);
+    letter-spacing:0.12em; margin-bottom:10px; display:block;
+  }
+  .step h3{font-size:1.02rem; margin-bottom:8px;}
+  .step p{font-size:0.88rem; color:var(--muted);}
+
+  /* ---------- work ---------- */
+  .work{background:var(--surface); border-block:1px solid var(--line);}
+  .work-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px;}
+  .case{
+    background:var(--card); border:1px solid var(--line);
+    border-radius:var(--radius); overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+  .case-thumb{
+    height:170px; display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,#2c2019,#221812); position:relative;
+  }
+  .case-thumb.soon{background:linear-gradient(135deg,#1b2029,#161a21);}
+  .case-thumb .name{font-size:1.4rem; font-weight:800; color:#f2e3c9; letter-spacing:-0.02em;}
+  .case-thumb .soon-label{
+    font-size:0.8rem; color:var(--muted); border:1px dashed var(--line-2);
+    padding:9px 18px; border-radius:100px;
+  }
+  .case-body{padding:22px 22px 24px; flex:1; display:flex; flex-direction:column;}
+  .case-body h3{font-size:1.08rem; margin-bottom:6px;}
+  .case-body .kind{font-size:0.78rem; color:var(--accent); font-weight:700; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.08em;}
+  .case-body p{font-size:0.9rem; color:var(--muted); margin-bottom:16px; flex:1;}
+  .tags{display:flex; flex-wrap:wrap; gap:7px;}
+  .tag{
+    font-size:0.74rem; color:var(--muted);
+    border:1px solid var(--line); border-radius:100px; padding:4px 11px;
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;}
+  .about p{color:var(--muted); margin-bottom:16px;}
+  .about p strong{color:var(--text);}
+  .values{display:flex; flex-direction:column; gap:18px;}
+  .value{display:flex; gap:15px; align-items:flex-start;}
+  .value .ico{
+    width:38px; height:38px; border-radius:10px; flex:none;
+    background:var(--accent-soft); display:flex; align-items:center; justify-content:center;
+  }
+  .value .ico svg{width:18px; height:18px; stroke:var(--accent); fill:none; stroke-width:2;}
+  .value h4{font-size:0.97rem; margin-bottom:4px;}
+  .value p{font-size:0.87rem; color:var(--muted); margin:0;}
+
+  /* ---------- faq ---------- */
+  .faq{background:var(--surface); border-block:1px solid var(--line);}
+  .faq-list{max-width:780px;}
+  details{border-bottom:1px solid var(--line); padding:20px 0;}
+  details summary{
+    cursor:pointer; font-weight:700; font-size:1rem; list-style:none;
+    display:flex; justify-content:space-between; gap:20px; align-items:center;
+  }
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{
+    content:"+"; color:var(--accent); font-size:1.4rem; font-weight:400; flex:none; line-height:1;
+  }
+  details[open] summary::after{content:"\2212";}
+  details p{color:var(--muted); font-size:0.93rem; margin-top:12px;}
+
+  /* ---------- cta ---------- */
+  .cta-band{text-align:center;}
+  .cta-box{
+    background:linear-gradient(135deg, var(--card-2), var(--card));
+    border:1px solid var(--line-2); border-radius:22px;
+    padding:64px 32px;
+  }
+  .cta-box h2{font-size:clamp(1.7rem,4vw,2.5rem); margin-bottom:16px;}
+  .cta-box p{color:var(--muted); max-width:520px; margin:0 auto 32px;}
+
+  /* ---------- footer ---------- */
+  footer.site{padding:52px 0 40px; border-top:1px solid var(--line);}
+  .foot{display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; align-items:flex-start;}
+  .foot-brand{max-width:280px;}
+  .foot-brand p{font-size:0.87rem; color:var(--muted); margin-top:12px;}
+  .foot-col h4{font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:14px; font-weight:700;}
+  .foot-col a{display:block; font-size:0.9rem; color:var(--muted); padding:4px 0; transition:color .15s;}
+  .foot-col a:hover{color:var(--accent);}
+  .foot-bottom{
+    margin-top:42px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    font-size:0.83rem; color:var(--muted);
+  }
+
+  /* ---------- whatsapp float ---------- */
+  .wa-float{
+    position:fixed; right:20px; bottom:20px; z-index:70;
+    width:54px; height:54px; border-radius:50%;
+    background:#25d366; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 26px rgba(0,0,0,0.42);
+    transition:transform .18s;
+  }
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:28px; height:28px; fill:#fff;}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .about-grid{grid-template-columns:1fr; gap:40px;}
+  }
+  @media (max-width:760px){
+    section{padding:70px 0;}
+    .nav-links{
+      display:none; position:absolute; top:68px; left:0; right:0;
+      flex-direction:column; gap:0; background:var(--surface);
+      border-bottom:1px solid var(--line); padding:8px 24px 18px;
+    }
+    .nav-links.open{display:flex;}
+    .nav-links a{padding:12px 0; border-bottom:1px solid var(--line); font-size:0.98rem;}
+    .burger{display:block; order:3;}
+    .nav-actions{margin-left:auto;}
+    .nav-actions .btn{display:none;}
+    .hero{padding:74px 0 64px;}
+    .trust{gap:22px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="btn btn-ghost" style="position:absolute;left:-9999px;top:0;"
+   onfocus="this.style.left='12px';this.style.top='12px';this.style.zIndex='100'"
+   onblur="this.style.left='-9999px'"
+   data-en="Skip to content">Ir al contenido</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="logo" href="#top">
+      <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <rect width="100" height="100" rx="22" fill="#1b2029"/>
+        <path d="M26 68 L50 28 L74 68" stroke="#ff6b35" stroke-width="11" fill="none"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Estudio Altiplano</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Principal">
+      <a href="#servicios" data-en="Services">Servicios</a>
+      <a href="#paquetes" data-en="Packages">Paquetes</a>
+      <a href="#proceso" data-en="Process">Proceso</a>
+      <a href="#trabajo" data-en="Work">Trabajo</a>
+      <a href="#nosotros" data-en="About">Nosotros</a>
+      <a href="#contacto" data-en="Contact">Contacto</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-primary" href="#contacto" data-en="Get a quote">Cotizar</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="navLinks"
+              aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" style="padding-top:96px;">
+  <div class="wrap">
+    <span class="badge">
+      <span class="dot"></span>
+      <span data-en="Available for new projects · San Luis Potosí">Disponible para nuevos proyectos · San Luis Potosí</span>
+    </span>
+    <h1>
+      <span data-en="Websites that bring">Sitios web que traen</span>
+      <span class="hl" data-en="real customers">clientes reales</span>
+    </h1>
+    <p class="lede" data-en="We build fast, secure sites for local businesses in San Luis Potosí — so people find you on Google, trust what they see, and message you in one tap.">
+      Construimos sitios rápidos y seguros para negocios locales de San Luis Potosí — para que te encuentren en Google, confíen en lo que ven y te escriban con un solo toque.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" id="heroWa" href="#contacto">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+        <span data-en="Chat on WhatsApp">Escríbenos por WhatsApp</span>
+      </a>
+      <a class="btn btn-ghost" href="#paquetes" data-en="See packages">Ver paquetes</a>
+    </div>
+
+    <div class="trust">
+      <div><strong>&lt;3s</strong><span data-en="Load time on 4G">Carga en 4G</span></div>
+      <div><strong>100%</strong><span data-en="Mobile first">Diseño móvil</span></div>
+      <div><strong>SSL</strong><span data-en="Included &amp; automatic">Incluido y automático</span></div>
+      <div><strong>SLP</strong><span data-en="Local, in person">Local, en persona</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-en="What we do">Qué hacemos</span>
+      <h2 data-en="Everything your business needs to exist online">Todo lo que tu negocio necesita para existir en línea</h2>
+      <p data-en="From a single page to a full digital presence. Pick only what you need — we'll tell you honestly what you don't.">
+        Desde una sola página hasta una presencia digital completa. Elige solo lo que necesitas — te diremos con honestidad lo que no.
+      </p>
+    </div>
+
+    <div class="cap-grid">
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div>
+        <h3 data-en="One-page site">Sitio de una página</h3>
+        <p data-en="Everything on a single scroll: menu, photos, hours, location and contact. Ideal for restaurants, cafés and shops.">
+          Todo en un solo scroll: menú, fotos, horarios, ubicación y contacto. Ideal para restaurantes, cafés y tiendas.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3 data-en="Multi-page website">Sitio multi-página</h3>
+        <p data-en="Home, services, gallery, about and contact. For businesses with more to explain than one page allows.">
+          Inicio, servicios, galería, nosotros y contacto. Para negocios con más que explicar de lo que cabe en una página.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4z"/><path d="M4 12h16M4 17h10"/></svg></div>
+        <h3 data-en="Digital menu &amp; catalog">Menú y catálogo digital</h3>
+        <p data-en="Your products or dishes with photos and prices, updatable without calling a developer. QR code for the table included.">
+          Tus productos o platillos con fotos y precios, actualizables sin llamar a un programador. Código QR para la mesa incluido.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3 data-en="Local SEO &amp; Google Business">SEO local y Google Business</h3>
+        <p data-en="We set up and optimize your Google Business Profile so you appear on Maps when someone searches nearby. Often worth more than the site itself.">
+          Damos de alta y optimizamos tu Perfil de Empresa en Google para que aparezcas en Maps cuando alguien busca cerca. A menudo vale más que el sitio mismo.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h8l-1 8 10-12h-8z"/></svg></div>
+        <h3 data-en="Speed &amp; Core Web Vitals">Velocidad y Core Web Vitals</h3>
+        <p data-en="Compressed images, no bloated frameworks, global CDN. A slow site loses customers before it ever loads.">
+          Imágenes comprimidas, sin frameworks pesados, CDN global. Un sitio lento pierde clientes antes de siquiera cargar.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3 data-en="Security &amp; HTTPS">Seguridad y HTTPS</h3>
+        <p data-en="Free automatic SSL certificate, DDoS protection and security headers. Nothing to patch, nothing to get hacked.">
+          Certificado SSL automático y gratuito, protección DDoS y encabezados de seguridad. Nada que parchar, nada que hackear.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
+        <h3 data-en="Professional email">Correo profesional</h3>
+        <p data-en="contacto@tunegocio.mx instead of a Hotmail address. Small change, big difference in how you're perceived.">
+          contacto@tunegocio.mx en lugar de un Hotmail. Cambio pequeño, gran diferencia en cómo te perciben.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3 data-en="WhatsApp &amp; bookings">WhatsApp y reservaciones</h3>
+        <p data-en="One-tap buttons to message, call or get directions. Optional booking or pre-order form for events and catering.">
+          Botones de un toque para escribir, llamar o llegar. Formulario opcional de reservación o pedido anticipado para eventos.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/></svg></div>
+        <h3 data-en="Analytics &amp; reports">Analítica y reportes</h3>
+        <p data-en="Cookie-free analytics — no annoying banner. Monthly report: visits, WhatsApp clicks and direction requests.">
+          Analítica sin cookies — sin el banner molesto. Reporte mensual: visitas, clics a WhatsApp y solicitudes de ruta.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3 data-en="Redesign &amp; rescue">Rediseño y rescate</h3>
+        <p data-en="Have an old, slow site nobody maintains? We modernize it, or rebuild it and move it somewhere reliable.">
+          ¿Tienes un sitio viejo y lento que nadie mantiene? Lo modernizamos, o lo reconstruimos y lo movemos a un lugar confiable.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg></div>
+        <h3 data-en="Maintenance &amp; support">Mantenimiento y soporte</h3>
+        <p data-en="Domain renewals, backups, uptime monitoring and content edits. You send a WhatsApp, we handle it.">
+          Renovación de dominio, respaldos, monitoreo y ediciones de contenido. Nos mandas un WhatsApp y nosotros lo resolvemos.</p>
+      </article>
+
+      <article class="cap">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></div>
+        <h3 data-en="Bilingual sites">Sitios bilingües</h3>
+        <p data-en="Spanish and English in one site, like this one. Useful for tourism, exports and anyone selling beyond the state.">
+          Español e inglés en un mismo sitio, como este. Útil para turismo, exportación y quien vende fuera del estado.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PACKAGES ============ -->
+<section class="packages" id="paquetes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-en="Packages">Paquetes</span>
+      <h2 data-en="Three ways to start">Tres formas de empezar</h2>
+      <p data-en="Every business is different, so every quote is too. Tell us what you need and we'll send you a fixed price — no surprises, no hourly billing.">
+        Cada negocio es distinto, así que cada cotización también. Cuéntanos qué necesitas y te enviamos un precio cerrado — sin sorpresas ni cobros por hora.
+      </p>
+    </div>
+
+    <div class="pkg-grid">
+      <article class="pkg">
+        <h3 data-en="Essential">Esencial</h3>
+        <p class="for" data-en="For a business that has nothing online yet and needs to exist on Google today.">
+          Para un negocio que aún no tiene nada en línea y necesita existir en Google hoy.</p>
+        <p class="price-note" data-en="Fixed price, quoted per project">Precio cerrado, cotizado por proyecto</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="One-page website, mobile first">Sitio de una página, diseño móvil</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Menu or services section">Sección de menú o servicios</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="WhatsApp, call &amp; Maps buttons">Botones de WhatsApp, llamada y Maps</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Google Business Profile setup">Alta del Perfil de Empresa en Google</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Hosting, SSL &amp; domain setup">Hosting, SSL y configuración de dominio</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="1 month of support">1 mes de soporte</span></li>
+        </ul>
+        <a class="btn btn-ghost pkg-cta" href="#contacto" data-pkg="Esencial" data-en="Get a quote">Cotizar por WhatsApp</a>
+      </article>
+
+      <article class="pkg featured">
+        <span class="pkg-tag" data-en="Most popular">Más elegido</span>
+        <h3 data-en="Professional">Profesional</h3>
+        <p class="for" data-en="For an established business that wants to look the part and be found first.">
+          Para un negocio establecido que quiere verse a la altura y aparecer primero.</p>
+        <p class="price-note" data-en="Fixed price, quoted per project">Precio cerrado, cotizado por proyecto</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Everything in Essential">Todo lo del paquete Esencial</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Up to 5 pages">Hasta 5 páginas</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Photo gallery &amp; testimonials">Galería de fotos y testimonios</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Contact form with spam protection">Formulario de contacto con antispam</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Professional email address">Correo profesional con tu dominio</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Analytics &amp; Search Console">Analítica y Search Console</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="3 months of support">3 meses de soporte</span></li>
+        </ul>
+        <a class="btn btn-primary pkg-cta" href="#contacto" data-pkg="Profesional" data-en="Get a quote">Cotizar por WhatsApp</a>
+      </article>
+
+      <article class="pkg">
+        <h3 data-en="Complete">Completo</h3>
+        <p class="for" data-en="For a business that wants to update its own content and grow month after month.">
+          Para un negocio que quiere actualizar su propio contenido y crecer mes con mes.</p>
+        <p class="price-note" data-en="Fixed price, quoted per project">Precio cerrado, cotizado por proyecto</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Everything in Professional">Todo lo del paquete Profesional</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Self-editable menu or catalog">Menú o catálogo autoeditable</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Bilingual Spanish / English">Bilingüe español / inglés</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Booking or pre-order form">Formulario de reservación o pedido</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Training session for your team">Capacitación para tu equipo</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Monthly maintenance plan">Plan de mantenimiento mensual</span></li>
+        </ul>
+        <a class="btn btn-ghost pkg-cta" href="#contacto" data-pkg="Completo" data-en="Get a quote">Cotizar por WhatsApp</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="proceso">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-en="How we work">Cómo trabajamos</span>
+      <h2 data-en="From first coffee to live site">Del primer café al sitio en línea</h2>
+      <p data-en="A clear process with no surprises. You always know what's happening and what comes next.">
+        Un proceso claro y sin sorpresas. Siempre sabes qué está pasando y qué sigue.
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="n">01</span>
+        <h3 data-en="We talk">Platicamos</h3>
+        <p data-en="In person or by WhatsApp. We ask about your business, your customers and what you actually need — not what we'd like to sell you.">
+          En persona o por WhatsApp. Preguntamos sobre tu negocio, tus clientes y lo que realmente necesitas — no lo que nos gustaría venderte.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h3 data-en="Fixed quote">Cotización cerrada</h3>
+        <p data-en="A one-page proposal: scope, timeline and a fixed price. 50% to start, 50% on delivery.">
+          Una propuesta de una página: alcance, tiempos y precio cerrado. 50% para empezar, 50% contra entrega.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h3 data-en="Content first">Contenido primero</h3>
+        <p data-en="We gather your photos, menu and texts, and approve the wording before designing a single pixel.">
+          Reunimos tus fotos, menú y textos, y aprobamos la redacción antes de diseñar un solo pixel.</p>
+      </div>
+      <div class="step">
+        <span class="n">04</span>
+        <h3 data-en="Design &amp; build">Diseño y desarrollo</h3>
+        <p data-en="You see the site while it's being built and get two rounds of changes included.">
+          Ves el sitio mientras se construye y tienes dos rondas de cambios incluidas.</p>
+      </div>
+      <div class="step">
+        <span class="n">05</span>
+        <h3 data-en="Testing">Pruebas</h3>
+        <p data-en="Real phones, slow connections, every browser. We check every price, phone number and map pin before launch.">
+          Teléfonos reales, conexiones lentas, todos los navegadores. Revisamos cada precio, teléfono y ubicación antes de lanzar.</p>
+      </div>
+      <div class="step">
+        <span class="n">06</span>
+        <h3 data-en="Launch &amp; handover">Lanzamiento y entrega</h3>
+        <p data-en="Domain and hosting stay in your name. We hand over every password — the site is yours, not ours.">
+          El dominio y el hosting quedan a tu nombre. Te entregamos todas las contraseñas — el sitio es tuyo, no nuestro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="work" id="trabajo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-en="Selected work">Trabajo seleccionado</span>
+      <h2 data-en="Recent projects">Proyectos recientes</h2>
+      <p data-en="We're just getting started, and we're picky about what we show. Every project here is real work for a real business.">
+        Vamos empezando, y somos selectivos con lo que mostramos. Cada proyecto aquí es trabajo real para un negocio real.
+      </p>
+    </div>
+
+    <div class="work-grid">
+      <article class="case">
+        <div class="case-thumb"><span class="name">La Pinta</span></div>
+        <div class="case-body">
+          <span class="kind" data-en="Churro shop · Villa de Pozos">Churrería · Villa de Pozos</span>
+          <h3>Churros La Pinta</h3>
+          <p data-en="A one-page site for an artisanal churro shop: menu with prices, opening hours, location and one-tap directions.">
+            Sitio de una página para una churrería artesanal: menú con precios, horarios, ubicación y ruta con un toque.</p>
+          <div class="tags">
+            <span class="tag" data-en="One-page">Una página</span>
+            <span class="tag" data-en="Local SEO">SEO local</span>
+            <span class="tag" data-en="Digital menu">Menú digital</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-thumb soon"><span class="soon-label" data-en="Your business here">Tu negocio aquí</span></div>
+        <div class="case-body">
+          <span class="kind" data-en="Available slot">Espacio disponible</span>
+          <h3 data-en="Next project">Siguiente proyecto</h3>
+          <p data-en="We take on a limited number of projects at a time so each one gets real attention. There's room for yours.">
+            Tomamos pocos proyectos a la vez para que cada uno reciba atención real. Hay lugar para el tuyo.</p>
+          <div class="tags">
+            <span class="tag" data-en="Restaurants">Restaurantes</span>
+            <span class="tag" data-en="Cafés">Cafeterías</span>
+            <span class="tag" data-en="Local shops">Comercios</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-thumb soon"><span class="soon-label" data-en="In progress">En desarrollo</span></div>
+        <div class="case-body">
+          <span class="kind" data-en="Coming soon">Próximamente</span>
+          <h3 data-en="More on the way">Más en camino</h3>
+          <p data-en="New projects are in progress. Follow along or ask us for references from clients we've already delivered.">
+            Hay nuevos proyectos en curso. Síguenos o pídenos referencias de clientes a quienes ya entregamos.</p>
+          <div class="tags">
+            <span class="tag">SLP</span>
+            <span class="tag">2026</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="nosotros">
+  <div class="wrap about-grid">
+    <div class="about">
+      <span class="eyebrow" data-en="About us">Nosotros</span>
+      <h2 style="font-size:clamp(1.7rem,4vw,2.5rem); margin-bottom:20px;"
+          data-en="A local studio, not a faceless agency">Un estudio local, no una agencia sin rostro</h2>
+      <p data-en="Estudio Altiplano is a small web studio based in San Luis Potosí. We build websites for the businesses around us: the churro shop, the café on the corner, the workshop that has been running for twenty years on word of mouth alone.">
+        Estudio Altiplano es un pequeño estudio web con base en San Luis Potosí. Hacemos sitios para los negocios que nos rodean: la churrería, el café de la esquina, el taller que lleva veinte años viviendo de recomendaciones.</p>
+      <p data-en="We don't sell templates or hide behind jargon. You deal directly with the person writing the code, you get a fixed price before we start, and you own everything at the end.">
+        No vendemos plantillas ni nos escondemos detrás de tecnicismos. Tratas directamente con quien escribe el código, tienes un precio cerrado antes de empezar y al final todo queda a tu nombre.</p>
+      <p><strong data-en="If a website isn't the right answer for your business, we'll tell you that too.">Si un sitio web no es la respuesta correcta para tu negocio, también te lo diremos.</strong></p>
+    </div>
+
+    <div class="values">
+      <div class="value">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div>
+          <h4 data-en="Fixed price, fixed date">Precio y fecha cerrados</h4>
+          <p data-en="You know the cost and the delivery date before we write the first line. No hourly billing, no scope creep.">
+            Sabes el costo y la fecha de entrega antes de escribir la primera línea. Sin cobros por hora ni alcance que crece solo.</p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6z"/></svg></div>
+        <div>
+          <h4 data-en="You own everything">Todo queda a tu nombre</h4>
+          <p data-en="Domain, hosting and Google accounts are registered under your name. We're collaborators, never gatekeepers.">
+            El dominio, el hosting y las cuentas de Google se registran a tu nombre. Somos colaboradores, nunca dueños de tu llave.</p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div>
+          <h4 data-en="We answer on WhatsApp">Contestamos por WhatsApp</h4>
+          <p data-en="No ticket system, no support queue. You write, a person answers — usually the same day.">
+            Sin sistema de tickets ni fila de soporte. Escribes y te contesta una persona — normalmente el mismo día.</p>
+        </div>
+      </div>
+      <div class="value">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h8l-1 8 10-12h-8z"/></svg></div>
+        <div>
+          <h4 data-en="Built to last">Hecho para durar</h4>
+          <p data-en="No plugins to update, no monthly license to forget. Your site keeps working while you focus on your business.">
+            Sin plugins que actualizar ni licencias mensuales que olvidar. Tu sitio sigue funcionando mientras te enfocas en tu negocio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-en="Questions">Preguntas</span>
+      <h2 data-en="Answers before you ask">Respuestas antes de que preguntes</h2>
+    </div>
+
+    <div class="faq-list">
+      <details>
+        <summary data-en="How much does a website cost?">¿Cuánto cuesta un sitio web?</summary>
+        <p data-en="It depends on how many pages you need, whether you already have photos and a logo, and whether you want to edit the content yourself. Send us a WhatsApp describing your business and we'll reply with a fixed price — free, no commitment.">
+          Depende de cuántas páginas necesites, si ya tienes fotos y logotipo, y si quieres editar el contenido tú mismo. Mándanos un WhatsApp describiendo tu negocio y te respondemos con un precio cerrado — gratis y sin compromiso.</p>
+      </details>
+      <details>
+        <summary data-en="How long does it take?">¿Cuánto tiempo tarda?</summary>
+        <p data-en="A one-page site is usually ready in one to two weeks, as long as we have your photos and texts. Larger sites take three to four weeks. The slowest part is almost always waiting for content.">
+          Un sitio de una página suele estar listo en una o dos semanas, siempre que tengamos tus fotos y textos. Los sitios más grandes toman de tres a cuatro semanas. Lo más lento casi siempre es esperar el contenido.</p>
+      </details>
+      <details>
+        <summary data-en="What do I have to pay every month?">¿Qué tengo que pagar cada mes?</summary>
+        <p data-en="Only the domain, which is roughly the price of a coffee per month. Hosting, SSL certificate and security are included at no cost on the platform we use. If you want us to handle updates and backups for you, we offer an optional monthly plan.">
+          Solo el dominio, que cuesta aproximadamente lo que un café al mes. El hosting, el certificado SSL y la seguridad van incluidos sin costo en la plataforma que usamos. Si quieres que nosotros nos encarguemos de actualizaciones y respaldos, ofrecemos un plan mensual opcional.</p>
+      </details>
+      <details>
+        <summary data-en="Can I update the site myself?">¿Puedo actualizar el sitio yo mismo?</summary>
+        <p data-en="Yes, if you want to. We can set up a simple editor for your menu or prices and train you to use it. But if you'd rather not deal with it, just send us a WhatsApp and we make the change for you — for many businesses that's the better option.">
+          Sí, si así lo quieres. Podemos configurar un editor sencillo para tu menú o precios y capacitarte para usarlo. Pero si prefieres no lidiar con eso, mándanos un WhatsApp y nosotros hacemos el cambio — para muchos negocios esa es la mejor opción.</p>
+      </details>
+      <details>
+        <summary data-en="I already have a website. Can you fix it?">Ya tengo un sitio web. ¿Pueden arreglarlo?</summary>
+        <p data-en="Often yes. Send us the link and we'll review it for free: speed, mobile display, security and whether Google can find it. Sometimes a few fixes are enough; sometimes rebuilding costs less than repairing.">
+          Muchas veces sí. Mándanos el enlace y lo revisamos gratis: velocidad, visualización en celular, seguridad y si Google lo encuentra. A veces bastan algunos ajustes; a veces reconstruir cuesta menos que reparar.</p>
+      </details>
+      <details>
+        <summary data-en="Do you work outside San Luis Potosí?">¿Trabajan fuera de San Luis Potosí?</summary>
+        <p data-en="Yes, we work remotely with clients anywhere in Mexico. But we know SLP best, and for local businesses there's real value in being able to meet in person.">
+          Sí, trabajamos a distancia con clientes de cualquier parte de México. Pero conocemos mejor SLP, y para un negocio local hay valor real en poder vernos en persona.</p>
+      </details>
+      <details>
+        <summary data-en="Do you issue invoices (factura)?">¿Emiten factura?</summary>
+        <p data-en="Yes. Send us your fiscal details — RFC, tax regime and CFDI use — and we'll issue your invoice with the payment.">
+          Sí. Envíanos tus datos fiscales — RFC, régimen fiscal y uso de CFDI — y emitimos tu factura junto con el pago.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-band" id="contacto">
+  <div class="wrap">
+    <div class="cta-box">
+      <span class="eyebrow" data-en="Let's talk">Platiquemos</span>
+      <h2 data-en="Tell us about your business">Cuéntanos de tu negocio</h2>
+      <p data-en="Send us a WhatsApp with what you do and what you need. We'll reply with honest advice and a fixed quote — free, no commitment.">
+        Mándanos un WhatsApp con lo que haces y lo que necesitas. Te respondemos con una recomendación honesta y una cotización cerrada — gratis y sin compromiso.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" id="mainWa" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+          <span data-en="WhatsApp us">Escríbenos por WhatsApp</span>
+        </a>
+        <a class="btn btn-ghost" id="mailLink" href="mailto:hola@estudioaltiplano.mx"
+           data-en="Send an email">Enviar un correo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <a class="logo" href="#top">
+          <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+            <rect width="100" height="100" rx="22" fill="#1b2029"/>
+            <path d="M26 68 L50 28 L74 68" stroke="#ff6b35" stroke-width="11" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Estudio Altiplano</span>
+        </a>
+        <p data-en="Web studio in San Luis Potosí. Fast, secure sites for local businesses.">
+          Estudio web en San Luis Potosí. Sitios rápidos y seguros para negocios locales.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4 data-en="Studio">Estudio</h4>
+        <a href="#servicios" data-en="Services">Servicios</a>
+        <a href="#paquetes" data-en="Packages">Paquetes</a>
+        <a href="#proceso" data-en="Process">Proceso</a>
+        <a href="#trabajo" data-en="Work">Trabajo</a>
+      </div>
+
+      <div class="foot-col">
+        <h4 data-en="Contact">Contacto</h4>
+        <a id="footWa" href="#">WhatsApp</a>
+        <a href="mailto:hola@estudioaltiplano.mx">hola@estudioaltiplano.mx</a>
+        <a href="https://www.linkedin.com/in/danielledezmana/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/danielLedezmaNa" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Estudio Altiplano · San Luis Potosí, México</span>
+      <span data-en="Built by hand. No templates.">Hecho a mano. Sin plantillas.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="floatWa" href="#" target="_blank" rel="noopener noreferrer"
+   aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C8.86 3 3.03 8.83 3.03 16c0 2.3.6 4.5 1.75 6.47L3 29l6.7-1.75A12.9 12.9 0 0 0 16.04 29C23.2 29 29 23.17 29 16S23.2 3 16.04 3zm7.6 18.36c-.32.9-1.86 1.72-2.57 1.79-.66.06-1.5.09-2.42-.15-.56-.15-1.28-.39-2.2-.79-3.88-1.67-6.4-5.57-6.6-5.83-.19-.26-1.57-2.09-1.57-3.98s.99-2.82 1.34-3.21c.35-.39.77-.48 1.02-.48.26 0 .51 0 .74.01.24.01.55-.09.86.65.32.77 1.09 2.66 1.18 2.85.1.19.16.42.03.68-.13.26-.19.42-.38.64-.19.23-.4.51-.57.68-.19.19-.39.4-.17.79.22.38.98 1.62 2.11 2.62 1.45 1.29 2.67 1.69 3.05 1.88.38.19.6.16.83-.1.22-.26.95-1.11 1.21-1.49.26-.39.51-.32.86-.19.35.13 2.23 1.05 2.61 1.24.38.19.64.29.73.45.1.16.1.91-.22 1.79z"/></svg>
+</a>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------------------------------------------------------------
+     CONFIG — replace these three values and the studio name in the
+     markup, then the site is ready to deploy.
+  --------------------------------------------------------------- */
+  var CONFIG = {
+    whatsapp: "5214440000000",              // country code + number, digits only
+    email:    "hola@estudioaltiplano.mx",
+    studio:   "Estudio Altiplano"
+  };
+
+  var MESSAGES = {
+    es: {
+      generic: "Hola, vi su sitio y me interesa cotizar una p\u00e1gina web para mi negocio.",
+      pkg:     "Hola, me interesa el paquete {p}. \u00bfMe pueden cotizar?",
+      menu:    "Abrir men\u00fa",
+      close:   "Cerrar men\u00fa",
+      desc:    "Dise\u00f1amos sitios web r\u00e1pidos, seguros y f\u00e1ciles de encontrar en Google para negocios locales de San Luis Potos\u00ed."
+    },
+    en: {
+      generic: "Hi, I saw your site and I'd like a quote for a website for my business.",
+      pkg:     "Hi, I'm interested in the {p} package. Could you send me a quote?",
+      menu:    "Open menu",
+      close:   "Close menu",
+      desc:    "We build fast, secure, easy-to-find websites for local businesses in San Luis Potos\u00ed, Mexico."
+    }
+  };
+
+  var PKG_NAMES = {
+    Esencial:    { es: "Esencial",    en: "Essential" },
+    Profesional: { es: "Profesional", en: "Professional" },
+    Completo:    { es: "Completo",    en: "Complete" }
+  };
+
+  function waLink(text) {
+    return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(text);
+  }
+
+  /* ---------------- language ---------------- */
+  var current = "es";
+  var toggles = document.querySelectorAll(".lang button");
+  var translatable = document.querySelectorAll("[data-en]");
+
+  // Cache the original Spanish text once, so switching back is lossless.
+  translatable.forEach(function (el) {
+    el.setAttribute("data-es", el.textContent.trim());
+  });
+
+  function setLang(lang) {
+    current = lang === "en" ? "en" : "es";
+    document.documentElement.lang = current;
+
+    translatable.forEach(function (el) {
+      var next = el.getAttribute(current === "en" ? "data-en" : "data-es");
+      if (next !== null) { el.textContent = next; }
+    });
+
+    toggles.forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.lang === current));
+    });
+
+    var meta = document.getElementById("metaDesc");
+    if (meta) { meta.setAttribute("content", MESSAGES[current].desc); }
+
+    refreshWhatsApp();
+
+    try { localStorage.setItem("lang", current); } catch (e) { /* private mode */ }
+  }
+
+  function refreshWhatsApp() {
+    var generic = waLink(MESSAGES[current].generic);
+    ["heroWa", "mainWa", "footWa", "floatWa"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) { el.href = generic; }
+    });
+
+    document.querySelectorAll(".pkg-cta").forEach(function (el) {
+      var key = el.dataset.pkg;
+      var label = (PKG_NAMES[key] && PKG_NAMES[key][current]) || key;
+      el.href = waLink(MESSAGES[current].pkg.replace("{p}", label));
+    });
+
+    var mail = document.getElementById("mailLink");
+    if (mail) { mail.href = "mailto:" + CONFIG.email; }
+  }
+
+  toggles.forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.dataset.lang); });
+  });
+
+  var saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) { /* ignore */ }
+  if (!saved && navigator.language && navigator.language.slice(0, 2) === "en") {
+    saved = "en";
+  }
+  setLang(saved || "es");
+
+  /* ---------------- mobile nav ---------------- */
+  var burger = document.getElementById("burger");
+  var navLinks = document.getElementById("navLinks");
+
+  burger.addEventListener("click", function () {
+    var open = navLinks.classList.toggle("open");
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", MESSAGES[current][open ? "close" : "menu"]);
+  });
+
+  navLinks.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+      navLinks.classList.remove("open");
+      burger.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  /* ---------------- misc ---------------- */
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Estudio Altiplano",
+  "description": "Diseño y desarrollo de sitios web para negocios locales en San Luis Potosí.",
+  "url": "https://estudioaltiplano.mx/",
+  "email": "hola@estudioaltiplano.mx",
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "State",
+    "name": "San Luis Potosí, México"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Luis Potosí",
+    "addressRegion": "S.L.P.",
+    "addressCountry": "MX"
+  },
+  "knowsLanguage": ["es-MX", "en"],
+  "founder": {
+    "@type": "Person",
+    "name": "Daniel Ledezma"
+  },
+  "sameAs": [
+    "https://github.com/danielLedezmaNa",
+    "https://www.linkedin.com/in/danielledezmana/"
+  ]
+}
+</script>
+
+</body>
+</html>
