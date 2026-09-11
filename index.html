@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Estudio Altiplano — Sitios web para negocios locales en San Luis Potosí</title>
-<meta name="description" id="metaDesc" content="Diseñamos sitios web rápidos, seguros y fáciles de encontrar en Google para negocios locales de San Luis Potosí. Cotiza tu proyecto por WhatsApp.">
+<meta name="description" id="metaDesc" content="Diseñamos sitios web rápidos, seguros y fáciles de encontrar en Google para negocios locales de San Luis Potosí. Cotiza tu proyecto sin compromiso.">
 <link rel="canonical" href="https://estudioaltiplano.mx/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
@@ -282,6 +282,10 @@
   .wa-float:hover{transform:scale(1.08);}
   .wa-float svg{width:28px; height:28px; fill:#fff;}
 
+  /* Contact CTAs show one icon at a time; JS picks which, based on CONFIG.whatsapp. */
+  .ico-mail{display:none;}
+  [hidden]{display:none !important;}
+
   /* ---------- responsive ---------- */
   @media (max-width:900px){
     .about-grid{grid-template-columns:1fr; gap:40px;}
@@ -367,8 +371,9 @@
     </p>
     <div class="hero-cta">
       <a class="btn btn-primary" id="heroWa" href="#contacto">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
-        <span data-en="Chat on WhatsApp">Escríbenos por WhatsApp</span>
+        <svg class="ico-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+        <svg class="ico-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        <span data-en="Chat on WhatsApp" data-mail-es="Escríbenos por correo" data-mail-en="Email us">Escríbenos por WhatsApp</span>
       </a>
       <a class="btn btn-ghost" href="#paquetes" data-en="See packages">Ver paquetes</a>
     </div>
@@ -506,7 +511,7 @@
           <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Hosting, SSL &amp; domain setup">Hosting, SSL y configuración de dominio</span></li>
           <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="1 month of support">1 mes de soporte</span></li>
         </ul>
-        <a class="btn btn-ghost pkg-cta" href="#contacto" data-pkg="Esencial" data-en="Get a quote">Cotizar por WhatsApp</a>
+        <a class="btn btn-ghost pkg-cta" href="#contacto" data-pkg="Esencial" data-en="Get a quote" data-mail-es="Cotizar por correo" data-mail-en="Get a quote">Cotizar por WhatsApp</a>
       </article>
 
       <article class="pkg featured">
@@ -524,7 +529,7 @@
           <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Analytics &amp; Search Console">Analítica y Search Console</span></li>
           <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="3 months of support">3 meses de soporte</span></li>
         </ul>
-        <a class="btn btn-primary pkg-cta" href="#contacto" data-pkg="Profesional" data-en="Get a quote">Cotizar por WhatsApp</a>
+        <a class="btn btn-primary pkg-cta" href="#contacto" data-pkg="Profesional" data-en="Get a quote" data-mail-es="Cotizar por correo" data-mail-en="Get a quote">Cotizar por WhatsApp</a>
       </article>
 
       <article class="pkg">
@@ -540,7 +545,7 @@
           <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Training session for your team">Capacitación para tu equipo</span></li>
           <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span data-en="Monthly maintenance plan">Plan de mantenimiento mensual</span></li>
         </ul>
-        <a class="btn btn-ghost pkg-cta" href="#contacto" data-pkg="Completo" data-en="Get a quote">Cotizar por WhatsApp</a>
+        <a class="btn btn-ghost pkg-cta" href="#contacto" data-pkg="Completo" data-en="Get a quote" data-mail-es="Cotizar por correo" data-mail-en="Get a quote">Cotizar por WhatsApp</a>
       </article>
     </div>
   </div>
@@ -561,8 +566,8 @@
       <div class="step">
         <span class="n">01</span>
         <h3 data-en="We talk">Platicamos</h3>
-        <p data-en="In person or by WhatsApp. We ask about your business, your customers and what you actually need — not what we'd like to sell you.">
-          En persona o por WhatsApp. Preguntamos sobre tu negocio, tus clientes y lo que realmente necesitas — no lo que nos gustaría venderte.</p>
+        <p data-en="In person or remotely. We ask about your business, your customers and what you actually need — not what we'd like to sell you.">
+          En persona o a distancia. Preguntamos sobre tu negocio, tus clientes y lo que realmente necesitas — no lo que nos gustaría venderte.</p>
       </div>
       <div class="step">
         <span class="n">02</span>
@@ -691,7 +696,7 @@
       <div class="value">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <div>
-          <h4 data-en="We answer on WhatsApp">Contestamos por WhatsApp</h4>
+          <h4 data-en="A person answers you">Te contesta una persona</h4>
           <p data-en="No ticket system, no support queue. You write, a person answers — usually the same day.">
             Sin sistema de tickets ni fila de soporte. Escribes y te contesta una persona — normalmente el mismo día.</p>
         </div>
@@ -719,8 +724,8 @@
     <div class="faq-list">
       <details>
         <summary data-en="How much does a website cost?">¿Cuánto cuesta un sitio web?</summary>
-        <p data-en="It depends on how many pages you need, whether you already have photos and a logo, and whether you want to edit the content yourself. Send us a WhatsApp describing your business and we'll reply with a fixed price — free, no commitment.">
-          Depende de cuántas páginas necesites, si ya tienes fotos y logotipo, y si quieres editar el contenido tú mismo. Mándanos un WhatsApp describiendo tu negocio y te respondemos con un precio cerrado — gratis y sin compromiso.</p>
+        <p data-en="It depends on how many pages you need, whether you already have photos and a logo, and whether you want to edit the content yourself. Write to us describing your business and we'll reply with a fixed price — free, no commitment.">
+          Depende de cuántas páginas necesites, si ya tienes fotos y logotipo, y si quieres editar el contenido tú mismo. Escríbenos describiendo tu negocio y te respondemos con un precio cerrado — gratis y sin compromiso.</p>
       </details>
       <details>
         <summary data-en="How long does it take?">¿Cuánto tiempo tarda?</summary>
@@ -734,8 +739,8 @@
       </details>
       <details>
         <summary data-en="Can I update the site myself?">¿Puedo actualizar el sitio yo mismo?</summary>
-        <p data-en="Yes, if you want to. We can set up a simple editor for your menu or prices and train you to use it. But if you'd rather not deal with it, just send us a WhatsApp and we make the change for you — for many businesses that's the better option.">
-          Sí, si así lo quieres. Podemos configurar un editor sencillo para tu menú o precios y capacitarte para usarlo. Pero si prefieres no lidiar con eso, mándanos un WhatsApp y nosotros hacemos el cambio — para muchos negocios esa es la mejor opción.</p>
+        <p data-en="Yes, if you want to. We can set up a simple editor for your menu or prices and train you to use it. But if you'd rather not deal with it, just write to us and we make the change for you — for many businesses that's the better option.">
+          Sí, si así lo quieres. Podemos configurar un editor sencillo para tu menú o precios y capacitarte para usarlo. Pero si prefieres no lidiar con eso, escríbenos y nosotros hacemos el cambio — para muchos negocios esa es la mejor opción.</p>
       </details>
       <details>
         <summary data-en="I already have a website. Can you fix it?">Ya tengo un sitio web. ¿Pueden arreglarlo?</summary>
@@ -762,13 +767,14 @@
     <div class="cta-box">
       <span class="eyebrow" data-en="Let's talk">Platiquemos</span>
       <h2 data-en="Tell us about your business">Cuéntanos de tu negocio</h2>
-      <p data-en="Send us a WhatsApp with what you do and what you need. We'll reply with honest advice and a fixed quote — free, no commitment.">
-        Mándanos un WhatsApp con lo que haces y lo que necesitas. Te respondemos con una recomendación honesta y una cotización cerrada — gratis y sin compromiso.
+        <p data-en="Write to us with what you do and what you need. We'll reply with honest advice and a fixed quote — free, no commitment.">
+        Escríbenos con lo que haces y lo que necesitas. Te respondemos con una recomendación honesta y una cotización cerrada — gratis y sin compromiso.
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" id="mainWa" href="#">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
-          <span data-en="WhatsApp us">Escríbenos por WhatsApp</span>
+          <svg class="ico-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+          <svg class="ico-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          <span data-en="WhatsApp us" data-mail-es="Escríbenos por correo" data-mail-en="Email us">Escríbenos por WhatsApp</span>
         </a>
         <a class="btn btn-ghost" id="mailLink" href="mailto:hola@estudioaltiplano.mx"
            data-en="Send an email">Enviar un correo</a>
@@ -805,7 +811,7 @@
 
       <div class="foot-col">
         <h4 data-en="Contact">Contacto</h4>
-        <a id="footWa" href="#">WhatsApp</a>
+        <a id="footWa" href="#" data-en="WhatsApp" data-mail-es="Correo" data-mail-en="Email">WhatsApp</a>
         <a href="mailto:hola@estudioaltiplano.mx">hola@estudioaltiplano.mx</a>
         <a href="https://www.linkedin.com/in/danielledezmana/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/danielLedezmaNa" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -820,7 +826,7 @@
 </footer>
 
 <a class="wa-float" id="floatWa" href="#" target="_blank" rel="noopener noreferrer"
-   aria-label="WhatsApp">
+   aria-label="WhatsApp" hidden>
   <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C8.86 3 3.03 8.83 3.03 16c0 2.3.6 4.5 1.75 6.47L3 29l6.7-1.75A12.9 12.9 0 0 0 16.04 29C23.2 29 29 23.17 29 16S23.2 3 16.04 3zm7.6 18.36c-.32.9-1.86 1.72-2.57 1.79-.66.06-1.5.09-2.42-.15-.56-.15-1.28-.39-2.2-.79-3.88-1.67-6.4-5.57-6.6-5.83-.19-.26-1.57-2.09-1.57-3.98s.99-2.82 1.34-3.21c.35-.39.77-.48 1.02-.48.26 0 .51 0 .74.01.24.01.55-.09.86.65.32.77 1.09 2.66 1.18 2.85.1.19.16.42.03.68-.13.26-.19.42-.38.64-.19.23-.4.51-.57.68-.19.19-.39.4-.17.79.22.38.98 1.62 2.11 2.62 1.45 1.29 2.67 1.69 3.05 1.88.38.19.6.16.83-.1.22-.26.95-1.11 1.21-1.49.26-.39.51-.32.86-.19.35.13 2.23 1.05 2.61 1.24.38.19.64.29.73.45.1.16.1.91-.22 1.79z"/></svg>
 </a>
 
@@ -833,15 +839,22 @@
      markup, then the site is ready to deploy.
   --------------------------------------------------------------- */
   var CONFIG = {
-    whatsapp: "5214440000000",              // country code + number, digits only
+    // Leave empty to run the site in email-only mode: every CTA becomes a
+    // mailto, the floating button stays hidden and the copy adapts.
+    // Fill in country code + number, digits only (e.g. "5214441234567")
+    // to switch the whole site back to WhatsApp. Nothing else to change.
+    whatsapp: "",
     email:    "hola@estudioaltiplano.mx",
     studio:   "Estudio Altiplano"
   };
+
+  var WA_ON = /^\d{10,15}$/.test(CONFIG.whatsapp);
 
   var MESSAGES = {
     es: {
       generic: "Hola, vi su sitio y me interesa cotizar una p\u00e1gina web para mi negocio.",
       pkg:     "Hola, me interesa el paquete {p}. \u00bfMe pueden cotizar?",
+      subject: "Cotizaci\u00f3n de sitio web",
       menu:    "Abrir men\u00fa",
       close:   "Cerrar men\u00fa",
       desc:    "Dise\u00f1amos sitios web r\u00e1pidos, seguros y f\u00e1ciles de encontrar en Google para negocios locales de San Luis Potos\u00ed."
@@ -849,6 +862,7 @@
     en: {
       generic: "Hi, I saw your site and I'd like a quote for a website for my business.",
       pkg:     "Hi, I'm interested in the {p} package. Could you send me a quote?",
+      subject: "Website quote request",
       menu:    "Open menu",
       close:   "Close menu",
       desc:    "We build fast, secure, easy-to-find websites for local businesses in San Luis Potos\u00ed, Mexico."
@@ -861,8 +875,13 @@
     Completo:    { es: "Completo",    en: "Complete" }
   };
 
-  function waLink(text) {
-    return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(text);
+  function contactLink(text) {
+    if (WA_ON) {
+      return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(text);
+    }
+    return "mailto:" + CONFIG.email +
+           "?subject=" + encodeURIComponent(MESSAGES[current].subject) +
+           "&body="    + encodeURIComponent(text);
   }
 
   /* ---------------- language ---------------- */
@@ -891,13 +910,13 @@
     var meta = document.getElementById("metaDesc");
     if (meta) { meta.setAttribute("content", MESSAGES[current].desc); }
 
-    refreshWhatsApp();
+    refreshContact();
 
     try { localStorage.setItem("lang", current); } catch (e) { /* private mode */ }
   }
 
-  function refreshWhatsApp() {
-    var generic = waLink(MESSAGES[current].generic);
+  function refreshContact() {
+    var generic = contactLink(MESSAGES[current].generic);
     ["heroWa", "mainWa", "footWa", "floatWa"].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) { el.href = generic; }
@@ -906,23 +925,46 @@
     document.querySelectorAll(".pkg-cta").forEach(function (el) {
       var key = el.dataset.pkg;
       var label = (PKG_NAMES[key] && PKG_NAMES[key][current]) || key;
-      el.href = waLink(MESSAGES[current].pkg.replace("{p}", label));
+      el.href = contactLink(MESSAGES[current].pkg.replace("{p}", label));
     });
 
     var mail = document.getElementById("mailLink");
-    if (mail) { mail.href = "mailto:" + CONFIG.email; }
+    if (mail) {
+      mail.href = "mailto:" + CONFIG.email;
+      // In email-only mode the primary CTA is already a mailto, so this
+      // secondary button would just duplicate it.
+      mail.hidden = !WA_ON;
+    }
+
+    var float = document.getElementById("floatWa");
+    if (float) { float.hidden = !WA_ON; }
+
+    document.querySelectorAll(".ico-wa").forEach(function (el) {
+      el.style.display = WA_ON ? "inline-block" : "none";
+    });
+    document.querySelectorAll(".ico-mail").forEach(function (el) {
+      el.style.display = WA_ON ? "none" : "inline-block";
+    });
+
+    if (!WA_ON) {
+      // setLang() has just written the WhatsApp wording; swap in the email
+      // wording for the elements that offer an alternative.
+      document.querySelectorAll("[data-mail-es]").forEach(function (el) {
+        var next = el.getAttribute(current === "en" ? "data-mail-en" : "data-mail-es");
+        if (next) { el.textContent = next; }
+      });
+    }
   }
 
   toggles.forEach(function (b) {
     b.addEventListener("click", function () { setLang(b.dataset.lang); });
   });
 
+  // Spanish is always the default. English is opt-in via the toggle and only
+  // sticks because we remember the visitor's own choice.
   var saved = null;
   try { saved = localStorage.getItem("lang"); } catch (e) { /* ignore */ }
-  if (!saved && navigator.language && navigator.language.slice(0, 2) === "en") {
-    saved = "en";
-  }
-  setLang(saved || "es");
+  setLang(saved === "en" ? "en" : "es");
 
   /* ---------------- mobile nav ---------------- */
   var burger = document.getElementById("burger");

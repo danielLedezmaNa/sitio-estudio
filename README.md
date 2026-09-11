@@ -7,17 +7,30 @@ one HTML file with inline CSS and vanilla JS. Deploys as static files to Cloudfl
 
 ---
 
-## Before you deploy: 4 find-and-replace edits
+## Contact mode: email or WhatsApp
+
+The site runs in **email-only mode** by default: `CONFIG.whatsapp` is an empty string, so every
+CTA becomes a prefilled `mailto:`, the floating button stays hidden, and the button copy reads
+"Escríbenos por correo".
+
+To switch the whole site to WhatsApp, set one value in [index.html](index.html):
+
+```js
+whatsapp: "5214441234567"   // country code + number, digits only
+```
+
+That single change flips the icons, the button labels, the floating button and the per-package
+prefilled messages. Nothing else to edit.
+
+---
+
+## Before you deploy: 3 find-and-replace edits
 
 | # | Find | Replace with | Where |
 |---|---|---|---|
 | 1 | `Estudio Altiplano` | Your real studio name | [index.html](index.html), [404.html](404.html) — 8 occurrences |
-| 2 | `5214440000000` | Your WhatsApp: country code + number, digits only (`52` + `1` + 10 digits) | [index.html](index.html) → `CONFIG.whatsapp` |
-| 3 | `hola@estudioaltiplano.mx` | Your real email | [index.html](index.html) — `CONFIG.email` + footer + `mailto:` |
-| 4 | `estudioaltiplano.mx` | Your real domain | [index.html](index.html), [robots.txt](robots.txt), [sitemap.xml](sitemap.xml) |
-
-All the WhatsApp links are generated in JS from `CONFIG.whatsapp` — change it in one place and
-every button updates, including the per-package prefilled messages.
+| 2 | `hola@estudioaltiplano.mx` | Your real email | [index.html](index.html) — `CONFIG.email` + footer + `mailto:` |
+| 3 | `estudioaltiplano.mx` | Your real domain | [index.html](index.html), [robots.txt](robots.txt), [sitemap.xml](sitemap.xml) |
 
 Also swap the inline SVG logo mark (the orange chevron) once you have a real logo.
 
