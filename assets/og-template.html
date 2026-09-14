@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    width:1200px; height:630px; overflow:hidden;
+    font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+    background:#0f1115; color:#eef0f4;
+    display:flex; flex-direction:column; justify-content:space-between;
+    padding:72px 80px; position:relative;
+  }
+  /* soft orange glow, same accent as the site */
+  body::before{
+    content:''; position:absolute; top:-260px; right:-200px;
+    width:760px; height:760px; border-radius:50%;
+    background:radial-gradient(circle, rgba(255,107,53,0.20) 0%, rgba(255,107,53,0) 68%);
+  }
+  .top{display:flex; align-items:center; gap:20px; position:relative;}
+  .mark{width:76px; height:76px; flex:0 0 76px;}
+  .name{font-size:2.1rem; font-weight:800; letter-spacing:-0.02em;}
+  h1{
+    position:relative; font-size:4.6rem; line-height:1.06;
+    font-weight:800; letter-spacing:-0.035em; max-width:15ch;
+  }
+  h1 .hl{color:#ff6b35;}
+  .bottom{display:flex; justify-content:space-between; align-items:flex-end; position:relative;}
+  .tag{font-size:1.5rem; color:#9aa3b2; font-weight:500;}
+  .url{
+    font-size:1.35rem; font-weight:700; color:#0f1115;
+    background:#ff6b35; padding:14px 28px; border-radius:999px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="top">
+    <svg class="mark" viewBox="0 0 100 100">
+      <rect width="100" height="100" rx="22" fill="#1b2029"/>
+      <path d="M26 68 L50 28 L74 68" stroke="#ff6b35" stroke-width="11" fill="none"
+            stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="name">Estudio Altiplano</span>
+  </div>
+
+  <h1>Sitios web que traen <span class="hl">clientes reales</span></h1>
+
+  <div class="bottom">
+    <span class="tag">Negocios locales · San Luis Potosí</span>
+    <span class="url">estudioaltiplano.mx</span>
+  </div>
+
+</body>
+</html>
