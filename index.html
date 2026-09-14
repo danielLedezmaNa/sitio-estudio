@@ -232,6 +232,37 @@
   .value h4{font-size:0.97rem; margin-bottom:4px;}
   .value p{font-size:0.87rem; color:var(--muted); margin:0;}
 
+  /* ---------- team ---------- */
+  .team{background:var(--surface); border-block:1px solid var(--line);}
+  .team-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:34px;
+  }
+  .member{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px; display:flex; gap:20px; align-items:flex-start;
+    transition:border-color .18s, transform .18s;
+  }
+  .member:hover{border-color:var(--accent); transform:translateY(-2px);}
+  .avatar{
+    width:62px; height:62px; flex:none; border-radius:16px;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-size:1.15rem; letter-spacing:-0.02em; color:#0f1115;
+    background:linear-gradient(140deg, var(--gold), var(--accent));
+  }
+  .member-body{min-width:0;}
+  .member h3{font-size:1.08rem; letter-spacing:-0.01em;}
+  .member .role{
+    display:block; font-size:0.78rem; font-weight:700; color:var(--accent);
+    text-transform:uppercase; letter-spacing:0.09em; margin:6px 0 10px;
+  }
+  .member p{font-size:0.89rem; color:var(--muted); margin-bottom:12px;}
+  .skills{display:flex; flex-wrap:wrap; gap:7px;}
+  .skills span{
+    font-size:0.73rem; font-weight:600; color:var(--muted);
+    background:var(--card-2); border:1px solid var(--line);
+    border-radius:100px; padding:4px 10px;
+  }
+
   /* ---------- faq ---------- */
   .faq{background:var(--surface); border-block:1px solid var(--line);}
   .faq-list{max-width:780px;}
@@ -292,6 +323,7 @@
   /* ---------- responsive ---------- */
   @media (max-width:900px){
     .about-grid{grid-template-columns:1fr; gap:40px;}
+    .team-grid{grid-template-columns:1fr;}
   }
   @media (max-width:760px){
     section{padding:70px 0;}
@@ -337,6 +369,7 @@
       <a href="#proceso" data-en="Process">Proceso</a>
       <a href="#trabajo" data-en="Work">Trabajo</a>
       <a href="#nosotros" data-en="About">Nosotros</a>
+      <a href="#equipo" data-en="Team">Equipo</a>
       <a href="#contacto" data-en="Contact">Contacto</a>
     </nav>
 
@@ -716,6 +749,49 @@
   </div>
 </section>
 
+<!-- ============ EQUIPO ============ -->
+<section class="team" id="equipo">
+  <div class="wrap">
+    <span class="eyebrow" data-en="The team">El equipo</span>
+    <h2 style="font-size:clamp(1.7rem,4vw,2.5rem); max-width:18ch;"
+        data-en="Two people. You know both of them.">Dos personas. A las dos las conoces.</h2>
+
+    <div class="team-grid">
+      <div class="member">
+        <div class="avatar" aria-hidden="true">FC</div>
+        <div class="member-body">
+          <h3>Frida Carlota Cordero Casados</h3>
+          <span class="role" data-en="Commercial &amp; creative director">Dirección comercial y creativa</span>
+          <p data-en="Frida is the first person you talk to. She listens to your business, shapes how the site should look and shoots the photography — because a great site with bad photos is still a bad site.">
+            Frida es la primera persona con la que hablas. Escucha tu negocio, define cómo debe verse el sitio y toma la fotografía — porque un buen sitio con malas fotos sigue siendo un mal sitio.</p>
+          <div class="skills">
+            <span data-en="Sales">Ventas</span>
+            <span data-en="Design">Diseño</span>
+            <span data-en="Logos &amp; identity">Logotipos e identidad</span>
+            <span data-en="Photography">Fotografía</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="member">
+        <div class="avatar" aria-hidden="true">DL</div>
+        <div class="member-body">
+          <h3>Daniel Ledezma Nájera</h3>
+          <span class="role" data-en="Technical director">Dirección técnica</span>
+          <p data-en="Daniel writes the code and handles everything invisible: domain, hosting, security, speed and making sure Google can find you. Fifteen years building software for the automotive industry.">
+            Daniel escribe el código y se encarga de todo lo invisible: dominio, alojamiento, seguridad, velocidad y que Google te encuentre. Quince años construyendo software para la industria automotriz.</p>
+          <div class="skills">
+            <span data-en="Development">Desarrollo</span>
+            <span data-en="Local SEO">SEO local</span>
+            <span data-en="Infrastructure">Infraestructura</span>
+            <span data-en="Security">Seguridad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FAQ ============ -->
 <section class="faq">
   <div class="wrap">
@@ -810,6 +886,7 @@
         <a href="#paquetes" data-en="Packages">Paquetes</a>
         <a href="#proceso" data-en="Process">Proceso</a>
         <a href="#trabajo" data-en="Work">Trabajo</a>
+        <a href="#equipo" data-en="Team">Equipo</a>
       </div>
 
       <div class="foot-col">
@@ -992,6 +1069,99 @@
 
   /* ---------------- misc ---------------- */
   document.getElementById("year").textContent = String(new Date().getFullYear());
+
+  /* ---------------- analítica ----------------
+     Umami Cloud: gratis, sin cookies y sin banner de consentimiento.
+     Para encenderla: crea el sitio en cloud.umami.is, copia el "Website ID"
+     y pégalo abajo. Mientras esté vacío no se carga nada externo, track()
+     no hace nada y el sitio funciona exactamente igual.
+  */
+  var UMAMI_ID = "";
+
+  if (UMAMI_ID) {
+    var beacon = document.createElement("script");
+    beacon.defer = true;
+    beacon.src = "https://cloud.umami.is/script.js";
+    beacon.setAttribute("data-website-id", UMAMI_ID);
+    document.head.appendChild(beacon);
+  }
+
+  // La analítica nunca debe poder romper el sitio: todo va envuelto.
+  function track(name, data) {
+    try {
+      if (window.umami && typeof window.umami.track === "function") {
+        window.umami.track(name, data || {});
+      }
+    } catch (e) { /* silencio intencional */ }
+  }
+
+  // 1. Botones de contacto: cuál de todos es el que realmente convierte.
+  var CTAS = {
+    heroWa:   "cta-portada",
+    mainWa:   "cta-cierre",
+    footWa:   "cta-pie",
+    floatWa:  "cta-flotante",
+    mailLink: "cta-correo"
+  };
+  Object.keys(CTAS).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("click", function () { track(CTAS[id]); });
+    }
+  });
+
+  // 2. Qué paquete despierta más interés.
+  document.querySelectorAll(".pkg-cta").forEach(function (el) {
+    el.addEventListener("click", function () {
+      track("paquete", { paquete: el.dataset.pkg || "sin-nombre" });
+    });
+  });
+
+  // 3. Secciones realmente vistas (no solo cargadas): se registra una vez
+  //    cuando casi la mitad de la sección estuvo en pantalla.
+  if ("IntersectionObserver" in window) {
+    var seen = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var id = entry.target.id;
+        if (entry.isIntersecting && id && !seen[id]) {
+          seen[id] = true;
+          track("seccion", { seccion: id });
+        }
+      });
+    }, { threshold: 0.45 });
+    document.querySelectorAll("section[id]").forEach(function (s) { io.observe(s); });
+  }
+
+  // 4. Preguntas del FAQ que la gente abre: son las dudas reales del cliente.
+  document.querySelectorAll("details").forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      if (!d.open) { return; }
+      var q = d.querySelector("summary");
+      track("faq", { pregunta: q ? q.textContent.trim().slice(0, 70) : "" });
+    });
+  });
+
+  // 5. Idioma elegido.
+  toggles.forEach(function (b) {
+    b.addEventListener("click", function () { track("idioma", { idioma: b.dataset.lang }); });
+  });
+
+  // 6. Hasta dónde bajan. Si casi nadie llega al 75%, la página es muy larga.
+  var marks = [25, 50, 75, 100];
+  var reached = {};
+  window.addEventListener("scroll", function () {
+    var doc = document.documentElement;
+    var total = doc.scrollHeight - window.innerHeight;
+    if (total <= 0) { return; }
+    var pct = ((doc.scrollTop || document.body.scrollTop) / total) * 100;
+    marks.forEach(function (m) {
+      if (pct >= m && !reached[m]) {
+        reached[m] = true;
+        track("scroll", { profundidad: m + "%" });
+      }
+    });
+  }, { passive: true });
 })();
 </script>
 
@@ -1017,8 +1187,23 @@
   "knowsLanguage": ["es-MX", "en"],
   "founder": {
     "@type": "Person",
-    "name": "Daniel Ledezma"
+    "name": "Daniel Ledezma Nájera",
+    "jobTitle": "Dirección técnica"
   },
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Frida Carlota Cordero Casados",
+      "jobTitle": "Dirección comercial y creativa",
+      "knowsAbout": ["Ventas", "Diseño", "Identidad de marca", "Fotografía"]
+    },
+    {
+      "@type": "Person",
+      "name": "Daniel Ledezma Nájera",
+      "jobTitle": "Dirección técnica",
+      "knowsAbout": ["Desarrollo web", "SEO local", "Infraestructura", "Seguridad"]
+    }
+  ],
   "sameAs": [
     "https://github.com/danielLedezmaNa",
     "https://www.linkedin.com/in/danielledezmana/"
