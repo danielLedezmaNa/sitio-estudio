@@ -13,25 +13,35 @@
 <meta property="og:url" content="https://estudioaltiplano.mx/">
 <meta property="og:image" content="https://estudioaltiplano.mx/assets/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0f1115">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f1115'/><path d='M26 68 L50 28 L74 68' stroke='%23ff6b35' stroke-width='11' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="theme-color" content="#13100E">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2313100E'/><path d='M50 47V84' stroke='%238A7458' stroke-width='7' stroke-linecap='round' fill='none'/><g stroke='%23D9713F' stroke-width='7' stroke-linecap='round' fill='none'><path d='M50 47Q50 30 50 14'/><path d='M50 47Q38 30 32 18'/><path d='M50 47Q62 30 68 18'/><path d='M50 47Q30 36 17 32'/><path d='M50 47Q70 36 83 32'/><path d='M50 47Q28 48 16 52'/><path d='M50 47Q72 48 84 52'/></g></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+  /* ===================================================================
+     Paleta "Altiplano potosino": noche del desierto, tierra quemada,
+     cantera rosa, maguey y luz de atardecer. Sobria y poco saturada —
+     el altiplano es árido y vacío, no folclórico.
+  =================================================================== */
   :root{
-    --ink:#0f1115;
-    --surface:#151920;
-    --card:#1b2029;
-    --card-2:#212734;
-    --line:rgba(255,255,255,0.09);
-    --line-2:rgba(255,255,255,0.16);
-    --text:#eef0f4;
-    --muted:#9aa3b2;
-    --accent:#ff6b35;
-    --accent-soft:rgba(255,107,53,0.12);
-    --gold:#ffd166;
-    --green:#3ddc97;
+    --ink:#13100E;         /* noche del desierto */
+    --surface:#191512;
+    --card:#201B17;
+    --card-2:#2A231D;
+    --line:rgba(232,209,180,0.10);
+    --line-2:rgba(232,209,180,0.21);
+    --text:#F2EBE1;        /* cal */
+    --muted:#A79B8C;
+    --accent:#D9713F;      /* tierra quemada */
+    --accent-hi:#E8865A;
+    --accent-soft:rgba(217,113,63,0.13);
+    --cantera:#C9806B;     /* cantera rosa de SLP */
+    --gold:#E8C07D;        /* luz de atardecer */
+    --green:#8CA678;       /* verde maguey */
+    --sky:#B9C6C9;         /* neblina */
+    --on-accent:#1B0E06;
+    --font-display:'Fraunces', 'Iowan Old Style', Georgia, serif;
     --radius:14px;
     --maxw:1140px;
   }
@@ -44,7 +54,17 @@
     line-height:1.6;
     overflow-x:hidden;
   }
-  h1,h2,h3,h4{line-height:1.15; font-weight:800; letter-spacing:-0.02em;}
+  /* Grano de grava volcánica sobre todo el sitio. */
+  body::before{
+    content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
+    opacity:0.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  h1,h2,h3,h4{
+    font-family:var(--font-display);
+    font-optical-sizing:auto;
+    line-height:1.12; font-weight:700; letter-spacing:-0.015em;
+  }
   a{color:inherit; text-decoration:none;}
   ul{list-style:none;}
   img,svg{display:block; max-width:100%;}
@@ -52,12 +72,15 @@
 
   .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
   .eyebrow{
-    display:inline-block;
+    display:inline-flex; align-items:center; gap:9px;
     font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;
-    color:var(--accent); margin-bottom:16px;
+    color:var(--cantera); margin-bottom:16px;
   }
-  .section-head{max-width:660px; margin-bottom:52px;}
-  .section-head h2{font-size:clamp(1.75rem,4vw,2.6rem); margin-bottom:14px;}
+  .eyebrow::before{
+    content:""; width:22px; height:1px; background:var(--cantera); opacity:.55; flex:none;
+  }
+  .section-head{max-width:680px; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(1.85rem,4.2vw,2.8rem); margin-bottom:14px;}
   .section-head p{color:var(--muted); font-size:1.05rem;}
   section{padding:96px 0; position:relative;}
 
@@ -71,8 +94,8 @@
     white-space:nowrap;
   }
   .btn:hover{transform:translateY(-2px);}
-  .btn-primary{background:var(--accent); color:#1a0d06;}
-  .btn-primary:hover{background:#ff7f4f;}
+  .btn-primary{background:var(--accent); color:var(--on-accent);}
+  .btn-primary:hover{background:var(--accent-hi);}
   .btn-ghost{border-color:var(--line-2); color:var(--text);}
   .btn-ghost:hover{border-color:var(--accent); color:var(--accent);}
   .btn svg{width:17px; height:17px;}
@@ -80,12 +103,13 @@
   /* ---------- header ---------- */
   header.site{
     position:sticky; top:0; z-index:60;
-    background:rgba(15,17,21,0.82);
+    background:rgba(19,16,14,0.84);
     backdrop-filter:blur(14px);
     border-bottom:1px solid var(--line);
   }
   .nav{display:flex; align-items:center; gap:28px; height:68px;}
-  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.05rem; letter-spacing:-0.02em;}
+  .logo{display:flex; align-items:center; gap:10px; font-size:1.05rem;}
+  .logo span{font-family:var(--font-display); font-weight:700; letter-spacing:-0.015em; white-space:nowrap;}
   .logo-mark{width:30px; height:30px; flex:none;}
   .nav-links{display:flex; gap:26px; margin-left:auto; font-size:0.93rem; font-weight:500;}
   .nav-links a{color:var(--muted); transition:color .15s;}
@@ -99,7 +123,7 @@
     background:none; border:none; color:var(--muted); cursor:pointer;
     padding:6px 11px; font:inherit; transition:.15s;
   }
-  .lang button[aria-pressed="true"]{background:var(--accent); color:#1a0d06;}
+  .lang button[aria-pressed="true"]{background:var(--accent); color:var(--on-accent);}
   .burger{
     display:none; background:none; border:1px solid var(--line-2);
     border-radius:9px; padding:8px; cursor:pointer;
@@ -107,23 +131,41 @@
   .burger svg{width:20px; height:20px; stroke:var(--text);}
 
   /* ---------- hero ---------- */
-  .hero{padding:110px 0 88px; text-align:center; position:relative; overflow:hidden;}
+  .hero{padding:110px 0 200px; text-align:center; position:relative; overflow:hidden;}
+  /* Amanecer sobre la sierra: ocre que se disuelve en violeta pálido.
+     Cubre todo el hero (en %) para que no se vea el borde del degradado. */
   .hero::before{
-    content:""; position:absolute; top:-260px; left:50%; transform:translateX(-50%);
-    width:900px; height:620px; pointer-events:none;
-    background:radial-gradient(ellipse at center, rgba(255,107,53,0.20), transparent 68%);
+    content:""; position:absolute; inset:-160px 0 0; pointer-events:none;
+    background:
+      radial-gradient(ellipse 62% 46% at 50% 26%, rgba(217,113,63,0.22), transparent 72%),
+      radial-gradient(ellipse 88% 52% at 50% 38%, rgba(118,96,120,0.15), transparent 74%);
   }
-  .hero > .wrap{position:relative;}
+  /* Neblina baja, como la de la foto del altiplano. */
+  .hero::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:230px;
+    pointer-events:none;
+    background:linear-gradient(180deg, transparent, rgba(185,198,201,0.07) 62%, transparent);
+  }
+  .hero > .wrap{position:relative; z-index:2;}
+  /* Silueta de sierra con palmas al pie del hero. */
+  .sierra{
+    position:absolute; left:0; right:0; bottom:-1px; width:100%; height:170px;
+    pointer-events:none; z-index:1;
+  }
+  .sierra .far{fill:#2A211A;}
+  .sierra .near{fill:var(--ink);}
+  .sierra .palma{stroke:var(--ink); stroke-width:2.8; stroke-linecap:round; fill:none;}
   .badge{
     display:inline-flex; align-items:center; gap:8px;
     padding:7px 16px; border:1px solid var(--line-2); border-radius:100px;
     font-size:0.82rem; color:var(--muted); margin-bottom:28px;
   }
   .badge .dot{width:7px; height:7px; border-radius:50%; background:var(--green); flex:none;}
-  .hero h1{font-size:clamp(2.3rem,6.2vw,4.35rem); margin-bottom:24px;}
+  .hero h1{font-size:clamp(2.3rem,6.2vw,4.5rem); margin-bottom:24px; font-weight:800;}
   .hero h1 .hl{
-    color:var(--accent);
-    background:linear-gradient(180deg, transparent 62%, var(--accent-soft) 62%);
+    color:var(--gold);
+    background:linear-gradient(180deg,
+      transparent 89%, rgba(232,192,125,0.42) 89%, rgba(232,192,125,0.42) 95%, transparent 95%);
   }
   .hero .lede{
     font-size:clamp(1.02rem,2.1vw,1.2rem); color:var(--muted);
@@ -135,7 +177,7 @@
     margin-top:56px; padding-top:34px; border-top:1px solid var(--line);
   }
   .trust div{text-align:center;}
-  .trust strong{display:block; font-size:1.5rem; color:var(--text); font-weight:800;}
+  .trust strong{display:block; font-family:var(--font-display); font-size:1.55rem; color:var(--text); font-weight:700;}
   .trust span{font-size:0.83rem; color:var(--muted);}
 
   /* ---------- capabilities ---------- */
@@ -165,7 +207,7 @@
   .pkg.featured{border-color:var(--accent); background:var(--card-2);}
   .pkg-tag{
     position:absolute; top:-12px; left:28px;
-    background:var(--accent); color:#1a0d06;
+    background:var(--accent); color:var(--on-accent);
     font-size:0.7rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase;
     padding:5px 13px; border-radius:100px;
   }
@@ -184,8 +226,9 @@
   .steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(228px,1fr)); gap:26px;}
   .step{position:relative; padding-top:22px; border-top:2px solid var(--line);}
   .step .n{
-    font-size:0.76rem; font-weight:800; color:var(--accent);
-    letter-spacing:0.12em; margin-bottom:10px; display:block;
+    font-family:var(--font-display);
+    font-size:0.95rem; font-weight:700; color:var(--cantera);
+    letter-spacing:0.08em; margin-bottom:10px; display:block;
   }
   .step h3{font-size:1.02rem; margin-bottom:8px;}
   .step p{font-size:0.88rem; color:var(--muted);}
@@ -200,17 +243,17 @@
   }
   .case-thumb{
     height:170px; display:flex; align-items:center; justify-content:center;
-    background:linear-gradient(135deg,#2c2019,#221812); position:relative;
+    background:linear-gradient(135deg,#3A281C,#241812); position:relative;
   }
-  .case-thumb.soon{background:linear-gradient(135deg,#1b2029,#161a21);}
-  .case-thumb .name{font-size:1.4rem; font-weight:800; color:#f2e3c9; letter-spacing:-0.02em;}
+  .case-thumb.soon{background:linear-gradient(135deg,#221C17,#191411);}
+  .case-thumb .name{font-family:var(--font-display); font-size:1.5rem; font-weight:700; color:#F0DCC0; letter-spacing:-0.01em;}
   .case-thumb .soon-label{
     font-size:0.8rem; color:var(--muted); border:1px dashed var(--line-2);
     padding:9px 18px; border-radius:100px;
   }
   .case-body{padding:22px 22px 24px; flex:1; display:flex; flex-direction:column;}
   .case-body h3{font-size:1.08rem; margin-bottom:6px;}
-  .case-body .kind{font-size:0.78rem; color:var(--accent); font-weight:700; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.08em;}
+  .case-body .kind{font-size:0.78rem; color:var(--cantera); font-weight:700; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.08em;}
   .case-body p{font-size:0.9rem; color:var(--muted); margin-bottom:16px; flex:1;}
   .tags{display:flex; flex-wrap:wrap; gap:7px;}
   .tag{
@@ -246,13 +289,14 @@
   .avatar{
     width:62px; height:62px; flex:none; border-radius:16px;
     display:flex; align-items:center; justify-content:center;
-    font-weight:800; font-size:1.15rem; letter-spacing:-0.02em; color:#0f1115;
+    font-family:var(--font-display);
+    font-weight:700; font-size:1.2rem; letter-spacing:-0.01em; color:#1B1410;
     background:linear-gradient(140deg, var(--gold), var(--accent));
   }
   .member-body{min-width:0;}
   .member h3{font-size:1.08rem; letter-spacing:-0.01em;}
   .member .role{
-    display:block; font-size:0.78rem; font-weight:700; color:var(--accent);
+    display:block; font-size:0.78rem; font-weight:700; color:var(--cantera);
     text-transform:uppercase; letter-spacing:0.09em; margin:6px 0 10px;
   }
   .member p{font-size:0.89rem; color:var(--muted); margin-bottom:12px;}
@@ -264,7 +308,7 @@
   }
 
   /* ---------- faq ---------- */
-  .faq{background:var(--surface); border-block:1px solid var(--line);}
+  .faq{background:var(--surface); border-top:1px solid var(--line);}
   .faq-list{max-width:780px;}
   details{border-bottom:1px solid var(--line); padding:20px 0;}
   details summary{
@@ -279,14 +323,21 @@
   details p{color:var(--muted); font-size:0.93rem; margin-top:12px;}
 
   /* ---------- cta ---------- */
-  .cta-band{text-align:center;}
+  .cta-band{text-align:center; padding-top:140px;}
+  /* Horizonte: la sección anterior baja en forma de sierra. */
+  .cta-band::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:80px;
+    pointer-events:none;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%23191512' d='M0 0H1440V30L1330 46 1210 26 1070 52 930 34 790 58 640 30 500 54 360 32 215 56 90 36 0 52Z'/%3E%3C/svg%3E") no-repeat center/100% 100%;
+  }
   .cta-box{
     background:linear-gradient(135deg, var(--card-2), var(--card));
     border:1px solid var(--line-2); border-radius:22px;
-    padding:64px 32px;
+    padding:64px 32px; position:relative;
   }
-  .cta-box h2{font-size:clamp(1.7rem,4vw,2.5rem); margin-bottom:16px;}
+  .cta-box h2{font-size:clamp(1.8rem,4vw,2.7rem); margin-bottom:16px;}
   .cta-box p{color:var(--muted); max-width:520px; margin:0 auto 32px;}
+  .cta-box .eyebrow{justify-content:center;}
 
   /* ---------- footer ---------- */
   footer.site{padding:52px 0 40px; border-top:1px solid var(--line);}
@@ -337,7 +388,9 @@
     .burger{display:block; order:3;}
     .nav-actions{margin-left:auto;}
     .nav-actions .btn{display:none;}
-    .hero{padding:74px 0 64px;}
+    .hero{padding:74px 0 150px;}
+    .sierra{height:120px;}
+    .cta-band{padding-top:110px;}
     .trust{gap:22px;}
   }
   @media (prefers-reduced-motion:reduce){
@@ -356,9 +409,13 @@
   <div class="wrap nav">
     <a class="logo" href="#top">
       <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
-        <rect width="100" height="100" rx="22" fill="#1b2029"/>
-        <path d="M26 68 L50 28 L74 68" stroke="#ff6b35" stroke-width="11" fill="none"
-              stroke-linecap="round" stroke-linejoin="round"/>
+        <rect width="100" height="100" rx="24" fill="#201B17"/>
+        <path d="M50 47V84" stroke="#8A7458" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <g stroke="#D9713F" stroke-width="7" stroke-linecap="round" fill="none">
+          <path d="M50 47Q50 30 50 14"/><path d="M50 47Q38 30 32 18"/><path d="M50 47Q62 30 68 18"/>
+          <path d="M50 47Q30 36 17 32"/><path d="M50 47Q70 36 83 32"/>
+          <path d="M50 47Q28 48 16 52"/><path d="M50 47Q72 48 84 52"/>
+        </g>
       </svg>
       <span>Estudio Altiplano</span>
     </a>
@@ -421,6 +478,26 @@
       <div><strong>SLP</strong><span data-en="Local, in person">Local, en persona</span></div>
     </div>
   </div>
+
+  <!-- Sierra del altiplano: dos cordilleras y tres palmas chinas en silueta. -->
+  <svg class="sierra" viewBox="0 0 1440 200" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path class="far" d="M0 128 L120 96 L235 120 L360 74 L470 108 L600 66 L720 104 L840 70 L980 112 L1105 80 L1225 116 L1330 88 L1440 118 V200 H0 Z"/>
+    <g class="palma">
+      <g transform="translate(300,98)">
+        <path d="M0 0V-23"/>
+        <path d="M0 -23 0 -38M0 -23 -8 -36M0 -23 8 -36M0 -23 -13 -31M0 -23 13 -31M0 -23 -15 -23M0 -23 15 -23"/>
+      </g>
+      <g transform="translate(884,84)">
+        <path d="M0 0V-18"/>
+        <path d="M0 -18 0 -30M0 -18 -6 -28M0 -18 6 -28M0 -18 -10 -24M0 -18 10 -24M0 -18 -12 -18M0 -18 12 -18"/>
+      </g>
+      <g transform="translate(1272,106)">
+        <path d="M0 0V-26"/>
+        <path d="M0 -26 0 -43M0 -26 -9 -40M0 -26 9 -40M0 -26 -15 -35M0 -26 15 -35M0 -26 -17 -26M0 -26 17 -26"/>
+      </g>
+    </g>
+    <path class="near" d="M0 170 L140 146 L270 168 L400 134 L520 162 L660 128 L800 158 L930 136 L1060 166 L1190 140 L1320 168 L1440 150 V200 H0 Z"/>
+  </svg>
 </section>
 
 <!-- ============ SERVICES ============ -->
@@ -870,9 +947,13 @@
       <div class="foot-brand">
         <a class="logo" href="#top">
           <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
-            <rect width="100" height="100" rx="22" fill="#1b2029"/>
-            <path d="M26 68 L50 28 L74 68" stroke="#ff6b35" stroke-width="11" fill="none"
-                  stroke-linecap="round" stroke-linejoin="round"/>
+            <rect width="100" height="100" rx="24" fill="#201B17"/>
+            <path d="M50 47V84" stroke="#8A7458" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <g stroke="#D9713F" stroke-width="7" stroke-linecap="round" fill="none">
+              <path d="M50 47Q50 30 50 14"/><path d="M50 47Q38 30 32 18"/><path d="M50 47Q62 30 68 18"/>
+              <path d="M50 47Q30 36 17 32"/><path d="M50 47Q70 36 83 32"/>
+              <path d="M50 47Q28 48 16 52"/><path d="M50 47Q72 48 84 52"/>
+            </g>
           </svg>
           <span>Estudio Altiplano</span>
         </a>
@@ -929,7 +1010,12 @@
     // to switch the whole site back to WhatsApp. Nothing else to change.
     whatsapp: "",
     email:    "hola@estudioaltiplano.mx",
-    studio:   "Estudio Altiplano"
+    studio:   "Estudio Altiplano",
+
+    // Analítica sin cookies (Umami Cloud, plan gratuito). Crea el sitio en
+    // cloud.umami.is, copia el "Website ID" y pégalo aquí. Mientras esté
+    // vacío no se carga nada externo y el sitio funciona exactamente igual.
+    umamiId:  "7fbab7d1-e1e4-44f7-bd28-c460e481496e"
   };
 
   var WA_ON = /^\d{10,15}$/.test(CONFIG.whatsapp);
@@ -1072,17 +1158,13 @@
 
   /* ---------------- analítica ----------------
      Umami Cloud: gratis, sin cookies y sin banner de consentimiento.
-     Para encenderla: crea el sitio en cloud.umami.is, copia el "Website ID"
-     y pégalo abajo. Mientras esté vacío no se carga nada externo, track()
-     no hace nada y el sitio funciona exactamente igual.
+     Se enciende pegando el "Website ID" en CONFIG.umamiId (arriba).
   */
-  var UMAMI_ID = "";
-
-  if (UMAMI_ID) {
+  if (CONFIG.umamiId) {
     var beacon = document.createElement("script");
     beacon.defer = true;
     beacon.src = "https://cloud.umami.is/script.js";
-    beacon.setAttribute("data-website-id", UMAMI_ID);
+    beacon.setAttribute("data-website-id", CONFIG.umamiId);
     document.head.appendChild(beacon);
   }
 

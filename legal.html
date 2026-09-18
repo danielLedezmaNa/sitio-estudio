@@ -7,14 +7,16 @@
 <meta name="description" content="Aviso de privacidad conforme a la LFPDPPP y términos de servicio de Estudio Altiplano, estudio web en San Luis Potosí.">
 <link rel="canonical" href="https://estudioaltiplano.mx/legal">
 <meta name="robots" content="index, follow">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f1115'/><path d='M26 68 L50 28 L74 68' stroke='%23ff6b35' stroke-width='11' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="theme-color" content="#13100E">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2313100E'/><path d='M50 47V84' stroke='%238A7458' stroke-width='7' stroke-linecap='round' fill='none'/><g stroke='%23D9713F' stroke-width='7' stroke-linecap='round' fill='none'><path d='M50 47Q50 30 50 14'/><path d='M50 47Q38 30 32 18'/><path d='M50 47Q62 30 68 18'/><path d='M50 47Q30 36 17 32'/><path d='M50 47Q70 36 83 32'/><path d='M50 47Q28 48 16 52'/><path d='M50 47Q72 48 84 52'/></g></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0f1115; --surface:#151920; --card:#1b2029; --line:#252b36;
-    --text:#eef0f4; --muted:#9aa3b2; --accent:#ff6b35;
+    --ink:#13100E; --surface:#191512; --card:#201B17; --line:#2C241E;
+    --text:#F2EBE1; --muted:#A79B8C; --accent:#D9713F; --cantera:#C9806B;
+    --font-display:'Fraunces','Iowan Old Style',Georgia,serif;
     --radius:14px; --maxw:780px;
   }
   *{margin:0; padding:0; box-sizing:border-box;}
@@ -24,6 +26,7 @@
     font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
     line-height:1.7; -webkit-font-smoothing:antialiased;
   }
+  h1,h2,h3{font-family:var(--font-display); font-optical-sizing:auto; font-weight:700;}
   .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
 
   header{
@@ -36,22 +39,23 @@
   }
   .logo{display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--text);}
   .logo svg{width:30px; height:30px;}
-  .logo span{font-weight:800; letter-spacing:-0.02em;}
+  .logo span{font-family:var(--font-display); font-weight:700; letter-spacing:-0.015em; white-space:nowrap;}
   .back{
     color:var(--muted); text-decoration:none; font-size:0.9rem; font-weight:600;
   }
   .back:hover{color:var(--accent);}
 
   main{padding:56px 0 90px;}
-  h1{font-size:clamp(1.9rem,4.5vw,2.6rem); letter-spacing:-0.03em; line-height:1.15;}
+  h1{font-size:clamp(1.95rem,4.5vw,2.7rem); letter-spacing:-0.02em; line-height:1.12;}
   .updated{color:var(--muted); font-size:0.9rem; margin-top:10px;}
 
   .toc{
     background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
     padding:20px 24px; margin:32px 0 8px;
   }
-  .toc h2{font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em;
-          color:var(--accent); margin-bottom:12px;}
+  .toc h2{font-family:'Plus Jakarta Sans',sans-serif;
+          font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em;
+          color:var(--cantera); margin-bottom:12px; font-weight:700;}
   .toc a{display:block; color:var(--muted); text-decoration:none;
          padding:5px 0; font-size:0.95rem;}
   .toc a:hover{color:var(--text);}
@@ -89,9 +93,13 @@
   <div class="wrap">
     <a class="logo" href="/">
       <svg viewBox="0 0 100 100" aria-hidden="true">
-        <rect width="100" height="100" rx="22" fill="#1b2029"/>
-        <path d="M26 68 L50 28 L74 68" stroke="#ff6b35" stroke-width="11" fill="none"
-              stroke-linecap="round" stroke-linejoin="round"/>
+        <rect width="100" height="100" rx="24" fill="#201B17"/>
+        <path d="M50 47V84" stroke="#8A7458" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <g stroke="#D9713F" stroke-width="7" stroke-linecap="round" fill="none">
+          <path d="M50 47Q50 30 50 14"/><path d="M50 47Q38 30 32 18"/><path d="M50 47Q62 30 68 18"/>
+          <path d="M50 47Q30 36 17 32"/><path d="M50 47Q70 36 83 32"/>
+          <path d="M50 47Q28 48 16 52"/><path d="M50 47Q72 48 84 52"/>
+        </g>
       </svg>
       <span>Estudio Altiplano</span>
     </a>
