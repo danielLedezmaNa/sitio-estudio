@@ -9,14 +9,16 @@ one HTML file with inline CSS and vanilla JS. Deploys as static files to Cloudfl
 
 ## Contact mode: email or WhatsApp
 
-The site runs in **email-only mode** by default: `CONFIG.whatsapp` is an empty string, so every
-CTA becomes a prefilled `mailto:`, the floating button stays hidden, and the button copy reads
-"Escríbenos por correo".
+The site is in **WhatsApp mode**: `CONFIG.whatsapp` holds the real number, so every CTA opens a
+prefilled `wa.me` chat and the floating button is visible.
 
-To switch the whole site to WhatsApp, set one value in [index.html](index.html):
+Set it to an empty string to fall back to email-only mode, where every CTA becomes a prefilled
+`mailto:`, the floating button stays hidden and the copy reads "Escríbenos por correo".
+
+The single value lives in [index.html](index.html):
 
 ```js
-whatsapp: "5214441234567"   // country code + number, digits only
+whatsapp: "524443300691"   // country code + number, digits only
 ```
 
 That single change flips the icons, the button labels, the floating button and the per-package
